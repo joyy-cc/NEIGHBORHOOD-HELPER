@@ -1,0 +1,118 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1c1c1c; /* Dark background */
+    color: #f0f0f0; /* Light text */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #333; /* Dark background for the dashboard */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #212121; /* Slightly lighter dark background */
+    color: #fdd835; /* Bold yellow for text */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-right: 3px solid #fdd835;
+}
+
+.sidebar h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fdd835; /* Yellow header */
+    margin-bottom: 40px;
+}
+
+.sidebar nav button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #424242; /* Dark grey for button background */
+    color: #f0f0f0; /* Light text */
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar nav button:hover {
+    background-color: #fdd835; /* Yellow on hover */
+    color: #212121; /* Black text on hover */
+    transform: scale(1.05);
+}
+
+.sidebar nav button#logoutBtn {
+    background-color: #d32f2f; /* Red for logout button */
+    color: white;
+}
+
+.sidebar nav button#logoutBtn:hover {
+    background-color: #f44336; /* Darker red for hover */
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for content */
+    color: #212121;
+    overflow-y: auto;
+}
+
+.content-section {
+    display: none;
+    padding: 20px;
+    background-color: #fff; /* White background for sections */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #212121;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Section Titles */
+.content-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fdd835;
+    margin-bottom: 20px;
+}
+
+/* Hover Effects on Sections */
+.content-section:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
